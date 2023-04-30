@@ -39,6 +39,7 @@
     "eslint-plugin-jsdoc": "^39.2.9",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "ethers": "^6.3.0",
     "prettier": "^2.2.1",
     "prettier-plugin-packagejson": "^2.2.18",
     "typescript": "^4.7.4"
@@ -46,5 +47,11 @@
   "packageManager": "yarn@3.2.1",
   "engines": {
     "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@rpch/crypto": "^0.3.4",
+    "@rpch/ethereum-provider": "^0.2.1",
+    "brfs": "^2.0.2",
+    "buffer": "^6.0.3"
   }
 }

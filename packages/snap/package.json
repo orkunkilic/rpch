@@ -28,7 +28,13 @@
   },
   "dependencies": {
     "@metamask/snaps-types": "^0.32.2",
-    "@metamask/snaps-ui": "^0.32.2"
+    "@metamask/snaps-ui": "^0.32.2",
+    "@rpch/crypto-for-nodejs": "^0.3.4",
+    "@rpch/crypto-for-web": "^0.3.4",
+    "@rpch/ethers": "^0.2.1",
+    "@rpch/sdk": "^0.2.1",
+    "ethereumjs-tx": "^2.1.2",
+    "text-encoding": "^0.7.0"
   },
   "devDependencies": {
     "@lavamoat/allow-scripts": "^2.0.3",
