@@ -163,7 +163,7 @@ export const onRpcRequest: OnRpcRequestHandler = async ({
         to: request.params[0],
         value: _ethers.BigNumber.from('1'),
         data: /* request.params[2] */ '0x',
-        nonce: _ethers.BigNumber.from('2'),
+        nonce: _ethers.BigNumber.from('4'),
         gasLimit: _ethers.BigNumber.from('21000'),
         // gas Price 10 gwei
         gasPrice: _ethers.BigNumber.from('10000000000'),
