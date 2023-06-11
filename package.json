@@ -17,6 +17,7 @@
     "packages/*"
   ],
   "scripts": {
+    "postinstall": "patch-package",
     "build": "yarn workspaces foreach --parallel --topological --verbose run build",
     "lint": "yarn lint:eslint && yarn lint:misc --check",
     "lint:eslint": "eslint . --cache --ext js,ts",
@@ -52,6 +53,8 @@
     "@rpch/crypto": "^0.3.4",
     "@rpch/ethereum-provider": "^0.2.1",
     "brfs": "^2.0.2",
-    "buffer": "^6.0.3"
+    "buffer": "^6.0.3",
+    "patch-package": "^7.0.0",
+    "postinstall-postinstall": "^2.1.0"
   }
 }
