@@ -1,0 +1,22 @@
+diff --git a/node_modules/@rpch/crypto-for-nodejs/index.js b/node_modules/@rpch/crypto-for-nodejs/index.js
+index c5fdd71..1df8ccd 100644
+--- a/node_modules/@rpch/crypto-for-nodejs/index.js
++++ b/node_modules/@rpch/crypto-for-nodejs/index.js
+@@ -576,11 +576,15 @@ module.exports.__wbindgen_memory = function() {
+     return addHeapObject(ret);
+ };
+ 
+-const path = require('path').join(__dirname, 'index_bg.wasm');
++// PATCH: We have to export imports to load inside snap
++module.exports.imports = imports;
++
++// PATCH: We are loading wasm inside the snap, we had to disable the following code
++/* const path = require('path').join(__dirname, 'index_bg.wasm');
+ const bytes = require('fs').readFileSync(path);
+ 
+ const wasmModule = new WebAssembly.Module(bytes);
+ const wasmInstance = new WebAssembly.Instance(wasmModule, imports);
+-wasm = wasmInstance.exports;
++wasm = wasmInstance.exports; */
+ module.exports.__wasm = wasm;
+ 

@@ -1,0 +1,14 @@
+diff --git a/node_modules/@rpch/crypto-for-web/index.js b/node_modules/@rpch/crypto-for-web/index.js
+index 5447ea2..77fe715 100644
+--- a/node_modules/@rpch/crypto-for-web/index.js
++++ b/node_modules/@rpch/crypto-for-web/index.js
+@@ -430,7 +430,8 @@ async function load(module, imports) {
+     }
+ }
+ 
+-function getImports() {
++// PATCH: We need to export the `load` function to use inside snap
++export function getImports() {
+     const imports = {};
+     imports.wbg = {};
+     imports.wbg.__wbindgen_string_new = function(arg0, arg1) {

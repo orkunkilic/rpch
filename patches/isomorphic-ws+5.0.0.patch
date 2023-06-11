@@ -1,0 +1,12 @@
+diff --git a/node_modules/isomorphic-ws/browser.js b/node_modules/isomorphic-ws/browser.js
+index f59be2d..f6e8cfe 100644
+--- a/node_modules/isomorphic-ws/browser.js
++++ b/node_modules/isomorphic-ws/browser.js
+@@ -14,4 +14,6 @@ if (typeof WebSocket !== 'undefined') {
+   ws = self.WebSocket || self.MozWebSocket
+ }
+ 
+-export default ws
++// PATCH: exporting using module notation
++module.exports = ws
++/* export default ws */
